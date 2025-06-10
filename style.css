@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for easier sizing */
+}
+
+body {
+    background-image: url("picture.jpg");
+    font-family: Arial, sans-serif; /* Optional for consistent font */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+    align-items: center;
+    height: 50px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.navbar-links {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar-links li a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.navbar-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.same {
+    text-align: center;
+    padding: 20px;
+    border-style: solid;
+    margin: 60px auto;
+    max-width: 900px; /* limit width on large screens */
+}
+
+.same p {
+    font-size: 1.5em;
+}
+
+#about a {
+    text-decoration: none;
+    color: blue;
+    font-size: x-large;
+}
+
+#c {
+    margin: 20px;
+}
+
+#gap td {
+    padding: 10px;
+}
+
+.place {
+    padding: 8px;
+    width: 100%; /* Make inputs full width */
+    max-width: 300px; /* max width */
+    box-sizing: border-box;
+}
+
+#btn {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Navbar stacking */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .navbar h1 {
+        margin-bottom: 10px;
+        font-size: 1.3em;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        font-size: 1.2em;
+        padding: 8px 0;
+        display: block;
+        width: 100%;
+    }
+
+    /* Sections */
+    .same {
+        margin: 20px 10px;
+        padding: 15px;
+        border-width: 1px;
+    }
+
+    /* Form inputs */
+    #gap td {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    #gap tr {
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    #gap td:first-child {
+        font-weight: bold;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    #gap td:last-child {
+        width: 100%;
+    }
+
+    /* Center form */
+    #c {
+        margin: 10px auto;
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.1em;
+    }
+
+    .navbar-links li a {
+        font-size: 1em;
+    }
+
+    .same p {
+        font-size: 1.2em;
+    }
+
+    #btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+/* Skills Section */
+
+#skills {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: left;
+}
+
+#skills h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.skill i {
+    font-size: 2.5em;
+    width: 40px;
+    color: #333;
+}
+
+/* Skill text */
+.skill span {
+    flex: 1;
+    font-size: 1.2em;
+}
+
+/* Skill bar container */
+.skill-bar {
+    width: 50%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+/* Skill level bar */
+.skill-level {
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Skill proficiency colors and widths */
+.java-level {
+    width: 80%; /* 80% proficiency */
+    background-color: #f44336; /* red */
+}
+
+.python-level {
+    width: 85%; /* 85% proficiency */
+    background-color: #306998; /* python blue */
+}
+
+.sql-level {
+    width: 70%; /* 70% proficiency */
+    background-color: #f29111; /* orange */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .skill {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skill-bar {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+
